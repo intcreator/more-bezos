@@ -1,0 +1,18 @@
+{
+    "name": "Bezos I",
+    "description": "Plays \"Bezos I\" after you make an order from Amazon",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.amazon.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
